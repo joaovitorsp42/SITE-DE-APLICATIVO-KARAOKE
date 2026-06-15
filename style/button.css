@@ -1,0 +1,57 @@
+.btn{
+  --btn-bg-color:var(--text-color-primary);
+  --btn-color:var(--bg-color);
+  border: none;
+ /*inutilizado no codigo: background-color: transparent;deixa a cor do fundo trasparente */
+  display: flex;
+  align-items: center;
+  width: fit-content; /* faz com que a largura seja do tamanho apenas do conteudo */
+
+  border-radius: 0.5rem;
+
+  font: var(--fw-md) var(--fs-base)/1.5rem var(--ff-sans);
+
+  cursor: pointer;
+
+  background: var(--btn-bg-color);
+  color: var(--btn-color);
+}
+.btn:hover {
+  --btn-bg-color: linear-gradient(
+    90deg, 
+    var(--brand-color-secondary) 0% , 
+    var(--brand-color-primary) 100%
+    );
+  --btn-color:var(--surface-color);
+}
+.btn-sm{
+  font-size: var(--fs-sm);
+  padding: 0.5rem 1rem;
+}
+.btn-md{
+  font-size: var(--fs-base);
+  padding: 0.75rem 1.5rem;
+}
+.btn-lg{
+ font-size: 1.125rem;
+ padding: 1rem 2rem;
+}
+.btn[area-label] {
+  position: relative;
+}
+.btn[area-label]::before{/*aplica conteudo antes*/
+    content: "";
+    position: absolute;
+    border-radius: inherit;/*pega as configuraçoes originais*/
+    inset: 1.5px;/*quero que sobre apenas esse valor sem cobrir*/
+    background-color: var(--bg-color);
+  }
+
+.btn[area-label]::after{ /*after aplica depois*/
+    content: attr(area-label) ;/*attr atribui o elemento selecionado*/
+    background: var(--btn-bg-color);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    z-index: 1;
+}

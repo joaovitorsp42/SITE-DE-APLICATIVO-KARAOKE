@@ -18,6 +18,16 @@
   display: grid;
   gap: 1px;
 }
+
+.flex{
+  display: flex;
+}
+.grid{
+  display: grid;
+}
+.gap-1{
+  gap: 1rem;
+}
 .container{
   --max-width: 375px;
   width: min(var(--max-width) , 100% - var(--px-lg) * 2);
