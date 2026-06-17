@@ -22,17 +22,23 @@
 .flex{
   display: flex;
 }
+.item-center{
+  align-items: center;
+}
 .grid{
   display: grid;
 }
 .gap-1{
   gap: 1rem;
 }
+.gap-1\.5{
+  gap: 1.5rem;
+}
 .container{
   --max-width: 375px;
   width: min(var(--max-width) , 100% - var(--px-lg) * 2);
   margin-inline:auto;
-  border: 1px solid red;
+ /*  border: 1px solid red; */
 }
 @media(width >= 80em){
   .container{
