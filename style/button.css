@@ -46,7 +46,7 @@
     content: "";
     position: absolute;
     border-radius: inherit;/*pega as configuraçoes originais*/
-    inset: 1.5px;/*quero que sobre apenas esse valor sem cobrir*/
+    inset: 1px;/*quero que sobre apenas esse valor sem cobrir*/
     background-color: var(--bg-color);
   }
 
